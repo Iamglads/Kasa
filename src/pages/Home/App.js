@@ -1,13 +1,12 @@
 import './App.css';
-import Nav from '../../components/Navigation/Nav';
+import Header from '../../components/Header/Header';
 
 function App() {
-  return (
-    <div className="App">
-      <Nav />
-      <h1>Accueil</h1>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+        </div>
+    );
 }
 
 export default App;

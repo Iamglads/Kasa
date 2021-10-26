@@ -6,12 +6,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Switch } from 'react-router';
 
 import App from './pages/Home/App';
+import Nav from './components/Navigation/Nav';
 import About from './pages/About/About';
 import Error from './pages/404/404';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <Nav />
       <Switch>
         <Route exact path="/">
           <App />
