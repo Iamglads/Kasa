@@ -6,7 +6,7 @@ import './Nav.css';
 class Nav extends React.Component {
     render() {
         return (
-            <div>
+            <div className="container__nav">
                 <nav className="main-nav">
                     <div className="main-nav-img">
                         <img src={logo} alt="logo-kaza" />

@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.location__list {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2em;
+    background: #f6f6f6;
+    border-radius: 25px;
+}

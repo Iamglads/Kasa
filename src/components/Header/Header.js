@@ -8,14 +8,16 @@ class Header extends React.Component {
     }
     render() {
         return (
-            <div
-                className="header"
-                style={{
-                    backgroundImage: `url(${this.props.background})`,
-                }}
-            >
-                <div>
-                    <h1> {this.props.text} </h1>
+            <div className="header">
+                <div
+                    className="header__wrappe"
+                    style={{
+                        backgroundImage: `url(${this.props.background})`,
+                    }}
+                >
+                    <div>
+                        <h1> {this.props.text} </h1>
+                    </div>
                 </div>
             </div>
         );

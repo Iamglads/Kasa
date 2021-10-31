@@ -13,23 +13,21 @@ import Footer from './components/Footer/Footer';
 
 ReactDOM.render(
     <React.StrictMode>
-        <div className="main__container">
-            <Router>
-                <Nav />
-                <Switch>
-                    <Route exact path="/">
-                        <App />
-                    </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route>
-                        <Error />
-                    </Route>
-                </Switch>
-                <Footer />
-            </Router>
-        </div>
+        <Router>
+            <Nav />
+            <Switch>
+                <Route exact path="/">
+                    <App />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route>
+                    <Error />
+                </Route>
+            </Switch>
+            <Footer />
+        </Router>
     </React.StrictMode>,
     document.getElementById('root')
 );

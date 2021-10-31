@@ -1,11 +1,14 @@
 import React from 'react';
+import './Card.css';
 
-class Card extends Component {
+class Card extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
+
     render() {
+        console.log(this.props);
         return (
             <li
                 className="card"
