@@ -1,0 +1,31 @@
+header {
+    min-width: 400px;
+    background: rgb(94, 74, 74);
+    height: 500px;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-slider {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.prev,
+.next {
+    z-index: 2;
+    position: absolute;
+}
+.next {
+    right: 30px;
+}
+
+.prev {
+    left: 30px;
+}
