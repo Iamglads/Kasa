@@ -5,6 +5,7 @@
 
 .main-nav {
     max-width: 1200px;
+    width: 1200px;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -17,11 +18,18 @@
 }
 
 .main-nav .main-nav-img img {
-    width: 100px;
+    width: 150px;
     height: auto;
+    object-fit: contain;
 }
 
 .main-nav .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-img {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -17,10 +17,12 @@ class App extends React.Component {
     renderLocations() {}
     render() {
         return (
-            <div className="App">
-                <Header text={this.state.text} background={background} />
-                <LocationList data={this.state.data} />
-            </div>
+            <main className="App">
+                <div className="App-wrappe">
+                    <Header text={this.state.text} background={background} />
+                    <LocationList data={this.state.data} />
+                </div>
+            </main>
         );
     }
 }

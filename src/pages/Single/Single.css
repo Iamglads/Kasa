@@ -1,0 +1,35 @@
+.container__single {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+.single__wrappe {
+    max-width: 1200px;
+}
+
+.description {
+    width: 1200px;
+    display: flex;
+}
+
+.title h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    display: flex;
+    align-items: flex-end;
+    color: #ff6060;
+}
+
+.title address {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #ff6060;
+}

@@ -12,11 +12,11 @@
 
 .card-title {
     font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 142.6%;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-start;
     color: #ffffff;
 }

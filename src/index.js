@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router';
 import App from './pages/Home/App';
 import Nav from './components/Navigation/Nav';
 import About from './pages/About/About';
+import Single from './pages/Single/Single';
 import Error from './pages/404/404';
 import Footer from './components/Footer/Footer';
 
@@ -18,6 +19,9 @@ ReactDOM.render(
             <Switch>
                 <Route exact path="/">
                     <App />
+                </Route>
+                <Route path="/single/:id">
+                    <Single />
                 </Route>
                 <Route path="/about">
                     <About />
@@ -35,4 +39,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);

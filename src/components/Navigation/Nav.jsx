@@ -9,7 +9,9 @@ class Nav extends React.Component {
             <div className="container__nav">
                 <nav className="main-nav">
                     <div className="main-nav-img">
-                        <img src={logo} alt="logo-kaza" />
+                        <Link className="link-img" to="/">
+                            <img src={logo} alt="logo-kaza" />
+                        </Link>
                     </div>
                     <div className="links">
                         <Link className="link" to="/">
