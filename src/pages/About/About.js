@@ -5,38 +5,38 @@ import Accordeon from '../../components/Accordeon/Accordeon';
 import '../../index.css';
 import './About.css';
 
-class About extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    render() {
-        const title1 = 'Fiabilité';
-        const text1 = 'Text 1';
-        const title2 = 'Respect';
-        const text2 =
-            'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.';
-        const title3 = 'Service';
-        const text3 = 'Text 1';
-        const title4 = 'Responsabilité';
-        const text4 = 'Text 1';
+const contentText = [
+    {
+        title: 'Fiabilité',
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    },
+    {
+        title: 'Respect',
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    },
+    {
+        title: 'Service',
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    },
+    {
+        title: 'Responsabilité',
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    },
+];
 
-        return (
-            <main className="container__about">
-                <div className="about__wrappe">
-                    <Header background={background} />
-                    <section className="container__card">
-                        <div>
-                            <Accordeon title={title1} text={text1} />
-                            <Accordeon title={title2} text={text2} />
-                            <Accordeon title={title3} text={text3} />
-                            <Accordeon title={title4} text={text4} />
-                        </div>
-                    </section>
-                </div>
-            </main>
-        );
-    }
-}
+const About = () => {
+    return (
+        <main className="container__about">
+            <div className="about__wrappe">
+                <Header background={background} />
+                <section className="container__accordion">
+                    {contentText.map((content, index) => {
+                        return <Accordeon key={index} content={content} />;
+                    })}
+                </section>
+            </div>
+        </main>
+    );
+};
 
 export default About;

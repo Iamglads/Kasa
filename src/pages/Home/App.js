@@ -1,30 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from '../../components/Header/Header';
 import LocationList from '../../components/LocationsList/LocationList';
 import background from '../../assets/background.png';
 import DataLocation from '../../data.json';
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            text: 'Chez vous, partout et ailleurs',
-            data: DataLocation,
-        };
-    }
+const App = () => {
+    const [headerTitle, setHeaderTitle] = useState(
+        'Chez vous, partout et ailleurs'
+    );
+    const [data, setData] = useState(DataLocation);
 
-    renderLocations() {}
-    render() {
-        return (
-            <main className="App">
-                <div className="App-wrappe">
-                    <Header text={this.state.text} background={background} />
-                    <LocationList data={this.state.data} />
-                </div>
-            </main>
-        );
-    }
-}
+    return (
+        <main className="App">
+            <div className="App-wrappe">
+                <Header text={headerTitle} background={background} />
+                <LocationList data={data} />
+            </div>
+        </main>
+    );
+};
 
 export default App;

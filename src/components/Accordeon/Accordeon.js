@@ -1,33 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './Accordeon.css';
 
-class CardAbout extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { isOpen: true };
-    }
-
-    ifOpen() {}
-
-    render() {
-        return (
-            <div>
-                <div className="wrappe__title">
-                    <h2> {this.props.title}</h2>
-                    <span>
-                        {this.state.isOpen ? (
-                            <i className="fas fa-chevron-down"></i>
+const Accordeon = ({ content }) => {
+    const [toggle, setToggle] = useState(false);
+    const { title, desc } = content;
+    return (
+        <>
+            <div className="wrappe">
+                <div className="wrappe__content">
+                    <h2> {title}</h2>
+                    <button
+                        type="button"
+                        className="btn-toggle"
+                        onClick={() => setToggle(!toggle)}
+                    >
+                        {toggle ? (
+                            <FaChevronDown className="icon" />
                         ) : (
-                            <i className="fas fa-chevron-up"></i>
+                            <FaChevronUp className="icon" />
                         )}
-                    </span>
-                </div>
-                <div className="wrappe__text">
-                    <p> {this.props.text}</p>
+                    </button>
                 </div>
             </div>
-        );
-    }
-}
+            {toggle ? (
+                <div className="wrappe__text">
+                    <p> {desc}</p>
+                </div>
+            ) : null}
+        </>
+    );
+};
 
-export default CardAbout;
+export default Accordeon;

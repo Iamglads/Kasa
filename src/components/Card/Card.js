@@ -2,28 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
 
-class Card extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    render() {
-        const id = this.props.data.id;
-        console.log(this.props.data.id);
-        return (
+const Card = ({ data }) => {
+    const { cover, title } = data;
+    return (
+        <li className="card">
             <Link
-                to={'/single/' + id}
-                className="card"
+                to="#"
+                className="link"
                 style={{
-                    backgroundImage: `url(${this.props.data.cover})`,
+                    backgroundImage: `url(${cover})`,
                     textDecoration: 'none',
                 }}
             >
-                <h2 className="card-title">{this.props.data.title}</h2>
+                <h2 className="card-title">{title}</h2>
             </Link>
-        );
-    }
-}
+        </li>
+    );
+};
 
 export default Card;
