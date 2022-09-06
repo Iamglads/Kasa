@@ -4,6 +4,12 @@
     justify-content: center;
 }
 
+.single__content {
+    margin: 60px 0;
+    min-height: 400px;
+    padding: 1em;
+}
+
 .single__wrappe {
     max-width: 1200px;
 }

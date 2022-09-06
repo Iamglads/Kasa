@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 
 const Card = ({ data }) => {
-    const { cover, title } = data;
+    const { id, cover, title } = data;
     return (
         <li className="card">
             <Link
-                to="#"
+                to={`single/${id}`}
                 className="link"
                 style={{
                     backgroundImage: `url(${cover})`,

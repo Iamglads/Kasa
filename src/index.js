@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Switch } from 'react-router';
 
+import data from './data';
+
 import App from './pages/Home/App';
 import Nav from './components/Navigation/Nav';
 import About from './pages/About/About';
@@ -21,7 +23,7 @@ ReactDOM.render(
                     <App />
                 </Route>
                 <Route path="/single/:id">
-                    <Single />
+                    <Single data={data} />
                 </Route>
                 <Route path="/about">
                     <About />

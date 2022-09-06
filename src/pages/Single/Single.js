@@ -1,39 +1,41 @@
 import React from 'react';
 import Slider from '../../components/Slider/Slider';
-import Accordeon from '../../components/Accordeon/Accordeon';
+import { useParams } from 'react-router-dom';
+
 import './Single.css';
 
-class Single extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            id: new URLSearchParams(window.location.search),
-        };
-    }
+const Single = ({ data }) => {
+    const param = useParams('id');
 
-    render() {
-        console.log(this.state);
-        const description = 'Description';
-        const equipements = 'Équipements';
+    const noData = () => {
         return (
             <div className="container__single">
                 <div className="single__wrappe">
-                    <Slider />
-                    <section>
-                        <div className="title">
-                            <h1>Cozy loft on the Canal Saint-Martin</h1>
-                            <address>Paris, Île-de-France</address>
-                        </div>
-                        <div className="user"></div>
-                    </section>
-                    <section className="description">
-                        <Accordeon title={description} />
-                        <Accordeon title={equipements} />
+                    <section className="single__content">
+                        <p>Aucun bien à afficher</p>
                     </section>
                 </div>
             </div>
         );
-    }
-}
+    };
+
+    return (
+        <div className="container__single">
+            <div className="single__wrappe">
+                <Slider data={pictures} />
+                <section className="single__content">
+                    <div className="title">
+                        <h1>{title}</h1>
+                        <address>{location}</address>
+                    </div>
+                    <div className="user">
+                        {/*  <img src={host.picture} alt={host.name} /> */}
+                        {/* <h3>{host.name}</h3> */}
+                    </div>
+                </section>
+            </div>
+        </div>
+    );
+};
 
 export default Single;
