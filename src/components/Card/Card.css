@@ -1,7 +1,6 @@
 .card {
     list-style: none;
-    width: 33%;
-    margin: 10px;
+    border-collapse: hidden;
 }
 
 .card-title {

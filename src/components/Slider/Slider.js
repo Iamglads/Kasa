@@ -3,34 +3,45 @@ import './Slider.css';
 import nextImage from '../../assets/right.png';
 import prevImage from '../../assets/left.png';
 
-const Slider = ({ data }) => {
-    const [index, setIndex] = useState([0]);
+const Slider = ({ pictures }) => {
+    const [index, setIndex] = useState(0);
 
     const next = () => {
-        console.log('next');
+        if (index >= pictures.length - 1) {
+            setIndex(0);
+        } else {
+            setIndex(() => index + 1);
+        }
+        console.log(index);
     };
 
     const prev = () => {
         console.log('Prev');
+        if (index <= 0) {
+            setIndex(pictures.length - 1);
+        } else {
+            setIndex(() => index - 1);
+        }
+        console.log(index);
     };
 
     return (
         <header
             style={{
-                backgroundImage: `url(${index})`,
+                backgroundImage: `url(${pictures[index]})`,
             }}
         >
             <img
                 className="image-slider"
                 src={prevImage}
                 alt="prev"
-                onClick={() => prev}
+                onClick={prev}
             />
             <img
                 className="image-slider"
                 src={nextImage}
                 alt="next"
-                onClick={() => next}
+                onClick={next}
             />
         </header>
     );

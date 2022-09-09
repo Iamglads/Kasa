@@ -30,9 +30,11 @@ const About = () => {
             <div className="about__wrappe">
                 <Header background={background} />
                 <section className="container__accordion">
-                    {contentText.map((content, index) => {
-                        return <Accordeon key={index} content={content} />;
-                    })}
+                    <div>
+                        {contentText.map((content, index) => {
+                            return <Accordeon key={index} content={content} />;
+                        })}
+                    </div>
                 </section>
             </div>
         </main>

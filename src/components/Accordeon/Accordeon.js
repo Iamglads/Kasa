@@ -16,9 +16,9 @@ const Accordeon = ({ content }) => {
                         onClick={() => setToggle(!toggle)}
                     >
                         {toggle ? (
-                            <FaChevronDown className="icon" />
-                        ) : (
                             <FaChevronUp className="icon" />
+                        ) : (
+                            <FaChevronDown className="icon" />
                         )}
                     </button>
                 </div>
