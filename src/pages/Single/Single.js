@@ -56,14 +56,14 @@ const Single = ({ data }) => {
                         </div>
                     </div>
                     <div className="content">
-                        <Accodeon
-                            className="description"
-                            content={description}
-                        />
-                        <Accodeon
-                            className="equipements"
-                            content={description}
-                        />
+                        <div>
+                            <p className="description">{description}</p>
+                        </div>
+                        <ul>
+                            {/*   {equipements.map((item, index) => {
+                                return <li key={index}>{item}</li>;
+                            })} */}
+                        </ul>
                     </div>
                 </section>
             </div>

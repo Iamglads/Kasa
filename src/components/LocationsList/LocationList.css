@@ -10,7 +10,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    padding: 2em;
+    padding: 2em 1em;
     background: #f6f6f6;
     border-radius: 25px;
 }

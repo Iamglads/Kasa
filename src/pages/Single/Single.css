@@ -7,13 +7,12 @@
 
 .single__wrappe {
     max-width: 1100px;
-    width: 100%;
 }
 
 
 .single__content {
     margin: 30px 1em;
-    min-height: 500px;
+    min-height: 700px;
 }
 
 
@@ -21,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     background: none;
     height: auto;
 }
@@ -28,8 +28,14 @@
 .user {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+@media screen and (max-width:600px) {
+    .user {
+    width: 100%;
+}
 }
  .user--name {
     display: flex;
@@ -87,11 +93,13 @@
     display: flex;
     padding: 0;
     justify-content: flex-start;
+    flex-wrap: wrap;
     list-style: none;
 }
 
 .tag-item {
     margin-right: 20px;
+    margin-bottom: 10px;
     padding: 5px 30px;
     border-radius: 20px;
     background: #ff6060;
@@ -101,14 +109,23 @@
 }
 
 .content {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin: 30px 1em;
+    flex-wrap: wrap;
+    margin: 60px 0;
 }
 
-.description, .equipements {
-    max-width: 50%;
-    width: 100%;
+.content .description {
+    font-family: Montserrat;
+    font-size: 18px;
+    color: #ff6060;
+    font-weight: 700;
 }
+
+@media screen and (max-width:600px) {
+    .content {
+        display: block;
+    }
+}
+
