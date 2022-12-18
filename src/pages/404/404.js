@@ -5,7 +5,7 @@ import './404.css';
 const Errors = () => {
     return (
         <div className="bloc-404">
-            <div>
+            <div className="wrapper">
                 <p className="text-404">404</p>
                 <p className="text">
                     Oups! La page que vous demandez n'existe pas.

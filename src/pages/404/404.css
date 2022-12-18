@@ -1,6 +1,7 @@
 .bloc-404 {
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 80vh;
 }
 
@@ -32,4 +33,8 @@
     text-decoration-line: underline;
     color: #ff6060;
     text-align: center;
+}
+
+.bloc-404 .wrapper{
+    margin: 0;
 }
